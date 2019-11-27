@@ -1,3 +1,55 @@
+.main {
+    font-size: 120%;
+}
+
+.output-area #output {
+    max-width: 50%;
+}
+
+.tasks .item {
+    margin-bottom: 3rem;
+}
+
+.tasks .item.blue .comment li {
+    display: inline;
+}
+
+.tasks .item.blue .comment li:nth-of-type(1) {
+    border-bottom: 3px solid red;
+}
+
+.tasks .item.blue .comment li:nth-of-type(2) {
+    border-bottom: 3px solid orange;
+}
+
+.tasks .item.blue .comment li:nth-of-type(3) {
+    border-bottom: 3px solid blue;
+}
+
+/* background of item-title*/
+
+.blue .item-title {
+    background: rgb(0, 195, 255);
+}
+
+.purple .item-title {
+    background: rgb(216, 182, 255);
+}
+
+.greenyellow .item-title {
+    background: greenyellow;
+}
+
+.orange .item-title {
+    background: orange;
+}
+
+.yellow .item-title {
+    background: yellow;
+}
+
+/*  */
+
 #id_textBox1 {
     height: 25px;
     width: 400px;
