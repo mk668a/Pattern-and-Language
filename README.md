@@ -1,5 +1,5 @@
 # nlp-js
-- リンク -> <a href="https://nlp-js-pal.herokuapp.com/index.html">English Analysis Tests</a>
+- リンク -> <a href="https://nlp-js.herokuapp.com/index.html">English Analysis Tests</a>
 
 ### 説明
 - 英文を入力すると解析して結果を表示する
