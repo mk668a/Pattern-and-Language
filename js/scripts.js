@@ -1,3 +1,8 @@
+window.onload = function () {
+    document.formStr.textBox1.focus()
+    onButtonClick();
+}
+
 function onButtonClick() {
     // output先 (output)
     var target = document.getElementById("output");
@@ -31,8 +36,18 @@ function onButtonClick() {
         if (task1) {
             isMatched = true;
             var newNode = document.createElement("li");
-            newNode.textContent = task1 + ": Matches yellow task";
-            newNode.style.background = "yellow"
+
+            var v = document.createElement("a");
+            v.innerText = task1;
+            v.style.color = "goldenrod"
+
+            var str = document.createElement("a");
+            str.innerText = "yellow";
+            str.style.background = "goldenrod"
+
+            newNode.appendChild(v)
+            newNode.appendChild(str)
+
             target.appendChild(newNode);
         }
 
@@ -41,9 +56,17 @@ function onButtonClick() {
         if (task2) {
             isMatched = true;
             var newNode = document.createElement("li");
-            newNode.style.background = "orange"
-            newNode.textContent = task2 + ": Matches orange task";
 
+            var v = document.createElement("a");
+            v.innerText = task2;
+            v.style.color = "coral"
+
+            var str = document.createElement("a");
+            str.innerText = "orange";
+            str.style.background = "coral"
+
+            newNode.appendChild(v)
+            newNode.appendChild(str)
 
             target.appendChild(newNode);
         }
@@ -58,8 +81,18 @@ function onButtonClick() {
             if (task3_1 && !task3_2) {
                 isMatched = true;
                 var newNode = document.createElement("li");
-                newNode.style.background = "greenyellow"
-                newNode.textContent = task3_0 + " " + task3_1 + ": Matches green task";
+
+                var v = document.createElement("a");
+                v.innerText = task3_0 + " " + task3_1;
+                v.style.color = "forestgreen"
+
+                var str = document.createElement("a");
+                str.innerText = "green";
+                str.style.background = "forestgreen"
+
+                newNode.appendChild(v)
+                newNode.appendChild(str)
+
                 target.appendChild(newNode);
             }
         }
@@ -73,17 +106,41 @@ function onButtonClick() {
     if (person) {
         isMatched = true;
         var newNode = document.createElement("li");
-        newNode.textContent = person + ": Matches purple task ( Person )";
-        newNode.style.background = "rgb(216, 182, 255)"
+
+        var v = document.createElement("a");
+        v.innerText = person + "(person)";
+        v.style.color = "slateblue"
+
+        var str = document.createElement("a");
+        str.innerText = "purple";
+        str.style.background = "slateblue"
+
+        newNode.appendChild(v)
+        newNode.appendChild(str)
+
         target.appendChild(newNode);
     }
     if (place) {
         isMatched = true;
         var newNode = document.createElement("li");
-        newNode.textContent = place + ": Matches purple task ( Place )";
-        newNode.style.background = "rgb(216, 182, 255)"
+
+        var v = document.createElement("a");
+        v.innerText = place + "(place)";
+        v.style.color = "slateblue"
+
+        var str = document.createElement("a");
+        str.innerText = "purple";
+        str.style.background = "slateblue"
+
+        newNode.appendChild(v)
+        newNode.appendChild(str)
+
         target.appendChild(newNode);
     }
+
+
+
+
 
     // blueタスク
     var verbs = nlp(inputText).verbs().data();
@@ -95,23 +152,24 @@ function onButtonClick() {
         for (var i in verbs) {
             // console.log(verbs[i].text, tense[i]);
             var newNode = document.createElement("li");
-            newNode.style.background = "rgb(0, 195, 255)"
+            newNode.style.color = "steelblue"
 
             var v = document.createElement("a");
             v.innerText = verbs[i].text + " (" + tense[i] + ")";
 
             if (tense[i] == "Present") {
-                v.style.borderBottom = "3px solid orange"
+                v.style.borderBottom = "2px solid coral"
             }
             else if (tense[i] == "Past") {
-                v.style.borderBottom = "3px solid red"
+                v.style.borderBottom = "2px solid palevioletred"
             }
             else {
-                v.style.borderBottom = "3px solid blue"
+                v.style.borderBottom = "2px solid steelblue"
             }
 
             var str = document.createElement("a");
-            str.innerText = ": Matches blue task";
+            str.innerText = "blue";
+            str.style.background = "steelblue"
 
             newNode.appendChild(v)
             newNode.appendChild(str)

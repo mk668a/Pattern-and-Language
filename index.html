@@ -3,12 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>English Analysis Tests</title>
+    <!-- js -->
     <script src="https://unpkg.com/compromise@latest/builds/compromise.min.js"></script>
     <script type="text/javascript" src="./js/scripts.js"></script>
+    <!-- css -->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -18,8 +23,14 @@
 
         <!-- Input Area -->
         <div class="input-area">
-            <h2>Input</h2>
-            <input name="textBox1" id="id_textBox1" type="text" value="" onChange="onButtonClick()" />
+            <h2>Please put the sentence and press the Enter key</h2>
+            <form id="form" name="formStr">
+                <input name="textBox1" id="id_textBox1" type="text"
+                    value="John was waiting for her who has same plan in Japan." onChange="onButtonClick()"
+                    onclick="this.select();" />
+                <input class="none" type="text" name="dummy">
+                <input class="none" type="button" />
+            </form>
         </div>
 
         <!-- Output Area -->
@@ -29,69 +40,59 @@
 
         <!-- Tasks -->
         <div class="tasks">
-            <h2>Tasks</h2>
             <ul>
                 <li class="item blue">
-                    <span class="item-title"><b>#6 Blue:</b> Match and colour code verb groups in
-                        simple tenses.
-                    </span>
+                    <p class="item-title"><a class="tag">blue</a> Match and colour code verb groups in simple tenses.
+                    </p>
 
                     <ul class="comment">
-                        <p>Comment:</p>
-                        <li>Past: red</li>
-                        <li>Present: orange</li>
-                        <li>Future: blue</li>
+                        <p>Color</p>
+                        <li>Past: <span>red</span> </li>
+                        <li>Present: <span>orange</span></li>
+                        <li>Future: <span>blue</span> </li>
                     </ul>
                 </li>
+
                 <li class="item purple">
-                    <span class="item-title"><b>#3 Purple:</b> Match place names and people names
-                        in any
-                        text.
-                    </span>
-
+                    <p class="item-title"><a class="tag">purple</a>Match place names and people names in any text.
+                    </p>
                 </li>
-                <li class="item greenyellow">
-                    <span class="item-title"><b>#5 Green:</b> Match finite verb groups in past progressive
-                        tense
-                    </span>
-                    <ul class="list">
-                        <p>The word that ending in 'ing' which is not progressive:</p>
-                        <li>wing, king, ring, sing, thing, something, anything, everything, nothing, string,
-                            interesting, boring
-                        </li>
-                    </ul>
 
+                <li class="item green">
+                    <p class="item-title"><a class="tag">green</a> Match finite verb groups in past progressive tense
+                        <br>（e.g. was watching）
+                    </p>
+                    <ul class="comment">
+                        <p>The word that ending in 'ing' which is not progressive:
+                            <br> wing, king, ring, sing, thing, something, anything, everything, nothing, string,
+                            interesting, boring </p>
+                    </ul>
                 </li>
                 <li class="item orange">
-                    <span class="item-title"><b>#7 Orange:</b> Detect relational
-                        verbs (e.g. be,
-                        contain)</span>
-                    <ul class="list">
-                        <p>List of relational verbs:</p>
-                        <li>belong, concern, consist, contain, cost, depend, equal,
-                            lack,
-                            matter, need, own, seem, sound, fit, deserve, include, involve, owe, require, resemble,
-                            possess,
-                            have, be</li>
-                    </ul>
+                    <p class="item-title"><a class="tag">orange</a> Detect relational verbs <br>（e.g. be, contain）</p>
 
                     <ul class="comment">
-                        <p>Comment:</p>
-                        <li>You can enter words and sentences</li>
-                        <li>You can use conjugated verb</li>
+                        <p>List of relational verbs:
+                            <br>belong, concern, consist, contain, cost, depend, equal,
+                            lack,
+                            matter, need, own, seem, sound, fit, deserve, include, involve, owe, require,
+                            resemble,
+                            possess,
+                            have, be</p>
+                        <p>You can enter words and sentences</p>
+                        <p>You can use conjugated verb</p>
                     </ul>
                 </li>
+
                 <li class="item yellow">
-                    <span class="item-title"><b>#2 Yellow:</b> Macth the pattern
+                    <p class="item-title"><a class="tag">yellow</a>Macth the pattern
                         of vowel, consonant, vowel,
                         letter
                         at
-                        the wnd of a
-                        word. e.g. come, fine</span>
-
+                        the end of a
+                        word.<br>（e.g. come, fine）</p>
                     <ul class="comment">
-                        <p>Comment:</p>
-                        <li>You can enter words and sentences</li>
+                        <p>You can enter words and sentences</p>
                     </ul>
                 </li>
             </ul>
